@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package sample.simple;
+package com.huli.houseprice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,13 +27,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Tests for {@link SampleSimpleApplication}.
+ * Tests for {@link Application}.
  *
  * @author Dave Syer
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringTestSampleSimpleApplicationTests {
+public class SpringTestApplicationTests {
 
 	@Autowired
 	ApplicationContext ctx;
@@ -41,8 +41,9 @@ public class SpringTestSampleSimpleApplicationTests {
 	@Test
 	public void testContextLoads() throws Exception {
 		assertThat(this.ctx).isNotNull();
-		assertThat(this.ctx.containsBean("helloWorldService")).isTrue();
-		assertThat(this.ctx.containsBean("sampleSimpleApplication")).isTrue();
+		assertThat(this.ctx.containsBean("funguguquerier")).isTrue();
+		assertThat(this.ctx.containsBean("querierFactory")).isTrue();
+		assertThat(this.ctx.containsBean("application")).isTrue();
 	}
 
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2017 the original author or authors.
+ * Copyright 2012-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,26 +14,14 @@
  * limitations under the License.
  */
 
-package sample.simple;
+package com.huli.houseprice;
 
-import javax.validation.constraints.NotNull;
+import org.springframework.boot.ExitCodeGenerator;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+public class ExitException extends RuntimeException implements ExitCodeGenerator {
 
-@Component
-@ConfigurationProperties(prefix = "sample")
-public class SampleConfigurationProperties {
-
-	@NotNull
-	private String name;
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
+	public int getExitCode() {
+		return 10;
 	}
 
 }

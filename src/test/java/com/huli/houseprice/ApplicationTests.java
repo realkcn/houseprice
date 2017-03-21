@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package sample.simple;
+package com.huli.houseprice;
 
 import org.junit.After;
 import org.junit.Before;
@@ -26,12 +26,12 @@ import org.springframework.boot.test.rule.OutputCapture;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Tests for {@link SampleSimpleApplication}.
+ * Tests for {@link Application}.
  *
  * @author Dave Syer
  * @author Phillip Webb
  */
-public class SampleSimpleApplicationTests {
+public class ApplicationTests {
 
 	@Rule
 	public OutputCapture outputCapture = new OutputCapture();
@@ -53,22 +53,22 @@ public class SampleSimpleApplicationTests {
 		}
 	}
 
-	@Test
-	public void testDefaultSettings() throws Exception {
-		SampleSimpleApplication.main(new String[0]);
-		String output = this.outputCapture.toString();
-		assertThat(output).contains("Hello Phil");
-		assertThat(output).contains("The @ConfigurationProperties bean class "
-				+ "sample.simple.SampleConfigurationProperties contains "
-				+ "validation constraints but had not been annotated "
-				+ "with @Validated");
-	}
-
-	@Test
-	public void testCommandLineOverrides() throws Exception {
-		SampleSimpleApplication.main(new String[] { "--name=Gordon" });
-		String output = this.outputCapture.toString();
-		assertThat(output).contains("Hello Gordon");
-	}
-
+//	@Test
+//	public void testDefaultSettings() throws Exception {
+//		Application.main(new String[0]);
+//		String output = this.outputCapture.toString();
+//		assertThat(output).contains("Hello Phil");
+//		assertThat(output).contains("The @ConfigurationProperties bean class "
+//				+ "SampleConfigurationProperties contains "
+//				+ "validation constraints but had not been annotated "
+//				+ "with @Validated");
+//	}
+//
+//	@Test
+//	public void testCommandLineOverrides() throws Exception {
+//		Application.main(new String[] { "--name=Gordon" });
+//		String output = this.outputCapture.toString();
+//		assertThat(output).contains("Hello Gordon");
+//	}
+//
 }

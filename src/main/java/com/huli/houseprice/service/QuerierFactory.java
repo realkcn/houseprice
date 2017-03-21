@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package sample.simple.service;
+package com.huli.houseprice.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HelloWorldService {
+public class QuerierFactory {
 
 	@Value("${name:World}")
 	private String name;
